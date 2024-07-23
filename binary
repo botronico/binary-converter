@@ -1,0 +1,16 @@
+# Function to convert a character to its binary representation
+def char_to_binary(char):
+    return format(ord(char), '08b')
+
+# Function to convert a word to its binary representation
+def word_to_binary(word):
+    return ' '.join(char_to_binary(char) for char in word)
+
+# Main
+if __name__ == "__main__":
+    # Get user input
+    word = input("Enter a word: ")
+    
+    # Convert the word to binary and print it
+    binary_representation = word_to_binary(word)
+    print("Binary representation:", binary_representation)
